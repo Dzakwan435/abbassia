@@ -1,0 +1,319 @@
+:root {
+    --primary: #1a5632;
+    --primary-light: #2e8b57;
+    --primary-dark: #0d2818;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: var(--primary);
+    color: white;
+    min-height: 100vh;
+    position: fixed;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-brand {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.menu-category {
+    padding: 15px 20px 5px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.menu {
+    padding: 0;
+}
+
+.menu-item {
+    padding: 12px 20px;
+    color: rgba(255,255,255,0.8);
+    transition: all 0.3s;
+    display: block;
+    text-decoration: none;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: var(--primary-light);
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item i {
+    width: 24px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s;
+    min-height: 100vh;
+}
+
+/* Button Styles */
+.btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    background: linear-gradient(135deg, #1a5632 0%, #2e8b57 100%);
+    color: white;
+    border-radius: 10px 10px 0 0 !important;
+    padding: 1.25rem;
+    border-bottom: none;
+}
+
+/* UKT Specific Styles */
+.virtual-account-box {
+    background: linear-gradient(135deg, #1a5632 0%, #2e8b57 100%);
+    color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.va-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 1rem 0;
+    font-family: 'Courier New', monospace;
+}
+
+.payment-card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.payment-card .card-header {
+    background: linear-gradient(135deg, #1a5632 0%, #2e8b57 100%);
+    color: white;
+    border-radius: 15px 15px 0 0 !important;
+    padding: 1.5rem;
+}
+
+.qr-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    margin: 1rem 0;
+    border: 1px solid #e9ecef;
+}
+
+.status-badge {
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.status-paid { background-color: #d4edda; color: #155724; }
+.status-pending { background-color: #fff3cd; color: #856404; }
+.status-failed { background-color: #f8d7da; color: #721c24; }
+.status-expired { background-color: #e2e3e5; color: #383d41; }
+
+.transaction-history {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.metode-pembayaran {
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.metode-pembayaran:hover {
+    border-color: var(--primary);
+    background-color: #f8f9fa;
+}
+
+.metode-pembayaran.selected {
+    border-color: var(--primary);
+    background-color: #e7f3ff;
+}
+
+/* Alert Styles */
+.alert {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Table Styles */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table thead {
+    background-color: var(--primary);
+    color: white;
+}
+
+.table th {
+    padding: 12px 15px;
+    border: none;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 12px 15px;
+    border-color: #e9ecef;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+        overflow: hidden;
+    }
+    
+    .sidebar-brand, .menu-item span, .menu-category {
+        display: none;
+    }
+    
+    .menu-item {
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    .menu-item i {
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+    
+    .main-content {
+        margin-left: 80px;
+    }
+    
+    .virtual-account-box {
+        padding: 1.5rem;
+    }
+    
+    .va-number {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        min-height: auto;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    .virtual-account-box {
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .va-number {
+        font-size: 1.2rem;
+    }
+    
+    .payment-card .card-header {
+        padding: 1rem;
+    }
+}
+
+/* Animation */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Custom Scrollbar */
+.transaction-history::-webkit-scrollbar {
+    width: 6px;
+}
+
+.transaction-history::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.transaction-history::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 10px;
+}
+
+.transaction-history::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}

@@ -1,0 +1,402 @@
+:root {
+    --primary: #1a5632;
+    --primary-light: #2e8b57;
+    --primary-dark: #0d2818;
+    --secondary: #6c757d;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: var(--primary);
+    color: white;
+    min-height: 100vh;
+    position: fixed;
+    transition: all 0.3s;
+}
+
+.sidebar-header {
+    padding: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-brand {
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.menu-category {
+    padding: 15px 20px 5px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+.menu {
+    padding: 0;
+}
+
+.menu-item {
+    padding: 10px 20px;
+    color: rgba(255,255,255,0.8);
+    transition: all 0.3s;
+    display: block;
+    text-decoration: none;
+}
+
+.menu-item:hover, .menu-item.active {
+    background-color: var(--primary-light);
+    color: white;
+    text-decoration: none;
+}
+
+.menu-item i {
+    width: 24px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+/* Button Styles */
+.btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+.stats-card {
+    transition: all 0.3s;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.stats-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+/* Calendar Styles untuk Jadwal Minggu */
+.calendar-day {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #e9ecef;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calendar-day.active {
+    background-color: #1a5632;
+    color: white;
+    transform: scale(1.1);
+}
+
+.calendar-day:hover:not(.active) {
+    background-color: #d4edda;
+    color: #1a5632;
+}
+
+.schedule-item {
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.schedule-item:hover {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.time-box {
+    border-left: 4px solid #1a5632;
+    background-color: #f8f9fa !important;
+}
+
+.schedule-details h6 {
+    color: #1a5632;
+    font-weight: 600;
+}
+
+.schedule-container {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Activity Timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.timeline-item:before {
+    content: "";
+    position: absolute;
+    left: -25px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    z-index: 1;
+}
+
+.timeline-item:after {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 15px;
+    width: 2px;
+    height: 100%;
+    background-color: #ddd;
+}
+
+.timeline-item:last-child:after {
+    display: none;
+}
+
+/* News Card */
+.news-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+/* Table Styles */
+.table thead {
+    background-color: var(--primary);
+    color: white;
+}
+
+.table th {
+    padding: 12px 15px;
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+
+/* Role Badges */
+.badge-admin {
+    background-color: #dc3545;
+    color: white;
+}
+
+.badge-dosen {
+    background-color: #0d6efd;
+    color: white;
+}
+
+.badge-mahasiswa {
+    background-color: #198754;
+    color: white;
+}
+
+/* Toggle Styles */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+    background-color: var(--primary);
+}
+
+input:checked + .toggle-slider:before {
+    transform: translateX(30px);
+}
+
+/* Toggle untuk sidebar */
+.sidebar.collapsed {
+    width: 80px;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-brand,
+.sidebar.collapsed .menu-item span,
+.sidebar.collapsed .menu-category {
+    display: none;
+}
+
+.sidebar.collapsed .menu-item {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.sidebar.collapsed .menu-item i {
+    margin-right: 0;
+    font-size: 1.2rem;
+}
+
+.main-content.expanded {
+    margin-left: 80px;
+}
+
+/* Toggle untuk dark mode */
+body.dark-mode {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+body.dark-mode .card {
+    background-color: #343a40;
+    color: var(--light);
+}
+
+body.dark-mode .stats-card {
+    background-color: #343a40;
+    color: var(--light);
+}
+
+/* Toggle untuk info box */
+.info-box.hidden {
+    display: none;
+}
+
+/* Toggle untuk schedule */
+.schedule-item.hidden {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+        overflow: hidden;
+    }
+    
+    .sidebar-brand, .menu-item span, .menu-category {
+        display: none;
+    }
+    
+    .menu-item {
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    .menu-item i {
+        margin-right: 0;
+        font-size: 1.2rem;
+    }
+    
+    .main-content {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        min-height: auto;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .calendar-day {
+        width: 35px;
+        height: 35px;
+        margin: 0 3px;
+        font-size: 0.8rem;
+    }
+    
+    .time-box {
+        min-width: 70px;
+        padding: 8px;
+    }
+}

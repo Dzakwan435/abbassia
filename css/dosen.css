@@ -1,0 +1,183 @@
+:root {
+            --primary: #1a5632;
+            --primary-light: #2e8b57;
+            --primary-dark: #0d2818;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --info: #042117;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --classic-gradient: linear-gradient(to right, #f0f2f5, #ffffff);
+            --edu-accent: rgba(46, 139, 87, 0.1);
+        }
+        
+        body {
+            background: var(--classic-gradient);
+            font-family: 'Georgia', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .sidebar {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            box-shadow: 2px 0 15px rgba(0,0,0,0.1);
+        }
+        
+        .sidebar-header {
+            background: linear-gradient(to right, rgba(255,255,255,0.1), transparent);
+            border-bottom: 1px solid rgba(255,255,255,0.15);
+        }
+        
+        .menu-category {
+            padding: 15px 20px 5px;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        
+        .menu {
+            padding: 0;
+        }
+        
+        .menu-item {
+            padding: 10px 20px;
+            color: rgba(255,255,255,0.8);
+            transition: all 0.4s ease;
+            display: block;
+            text-decoration: none;
+            background: linear-gradient(to right, transparent, transparent);
+        }
+        
+        .menu-item:hover, .menu-item.active {
+            background: linear-gradient(to right, var(--primary-light), transparent);
+            box-shadow: inset 0 0 10px rgba(255,255,255,0.1);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .menu-item i {
+            width: 24px;
+            text-align: center;
+            margin-right: 10px;
+        }
+        
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+            transition: all 0.3s;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+            background: linear-gradient(145deg, #ffffff, #f8f9fa);
+        }
+        
+        .card:hover {
+            transform: translateY(-2px);
+        }
+        
+        .stats-card {
+            background: linear-gradient(165deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(26, 86, 50, 0.2);
+        }
+        
+        .stats-card-success {
+            background: linear-gradient(165deg, #28a745 0%, #1e7e34 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+        }
+        
+        .stats-card-info {
+            background: linear-gradient(165deg, #042117 0%, #031510 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(4, 33, 23, 0.2);
+        }
+        
+        .stats-card-warning {
+            background: linear-gradient(165deg, #ffc107 0%, #d39e00 100%);
+            color: #212529;
+            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
+        }
+        
+        .stats-icon {
+            font-size: 2.5rem;
+            opacity: 0.8;
+        }
+        
+        .welcome-card {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%),
+                        url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjZmZmIiBmaWxsLW9wYWNpdHk9IjAuMDUiLz4KPC9zdmc+');
+        }
+        
+        .schedule-item {
+            background: linear-gradient(to right, var(--edu-accent), transparent);
+            border-left: 4px solid var(--primary);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .schedule-time {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .grade-badge {
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .grade-A { background: linear-gradient(145deg, #28a745, #218838); }
+        .grade-A- { background: linear-gradient(145deg, #5cb85c, #4cae4c); }
+        .grade-B\+ { background: linear-gradient(145deg, #5bc0de, #46b8da); }
+        .grade-B { background: linear-gradient(145deg, #5bc0de, #31b0d5); }
+        .grade-B- { background: linear-gradient(145deg, #5bc0de, #2aabd2); }
+        .grade-C\+ { background: linear-gradient(145deg, #ffc107, #edb100); }
+        .grade-C { background: linear-gradient(145deg, #ffc107, #d39e00); }
+        .grade-D { background: linear-gradient(145deg, #fd7e14, #dc6502); }
+        .grade-E { background: linear-gradient(145deg, #dc3545, #c82333); }
+        
+        .fade-in {
+            animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(20px) scale(0.98);
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .sidebar {
+                background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                background: linear-gradient(90deg, var(--primary-dark) 0%, var(--primary) 100%);
+            }
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+            background: linear-gradient(to bottom right, rgba(255,255,255,0.9), rgba(255,255,255,0.95));
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            padding: 20px;
+        }

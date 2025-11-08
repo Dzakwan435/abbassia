@@ -1,0 +1,96 @@
+.grade-card {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    width: fit-content;
+}
+
+.grade-A { background: linear-gradient(135deg, #28a745, #218838); }
+.grade-B { background: linear-gradient(135deg, #17a2b8, #138496); }
+.grade-C { background: linear-gradient(135deg, #ffc107, #d39e00); }
+.grade-D { background: linear-gradient(135deg, #fd7e14, #dc6502); }
+.grade-E { background: linear-gradient(135deg, #dc3545, #bd2130); }
+
+.stats-card {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #024820, #013b15);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.table-custom {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.table-custom thead {
+    background: linear-gradient(135deg, #024820, #013b15);
+    color: white;
+}
+
+.table-custom th {
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.table-custom td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+.table-custom tbody tr:hover {
+    background-color: rgba(2, 72, 32, 0.05);
+}
+
+.matkul-info {
+    padding: 0.5rem;
+    border-left: 4px solid #024820;
+    background: linear-gradient(to right, rgba(2, 72, 32, 0.05), transparent);
+}
+
+.jadwal-badge {
+    background: linear-gradient(135deg, #6c757d, #495057);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.search-box {
+    background: linear-gradient(135deg, #fff, #f8f9fa);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.pagination .page-link {
+    color: #024820;
+    border: none;
+    margin: 0 3px;
+    border-radius: 5px;
+}
+
+.pagination .page-item.active .page-link {
+    background: linear-gradient(135deg, #024820, #013b15);
+    border: none;
+}
